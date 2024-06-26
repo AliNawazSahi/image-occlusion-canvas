@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Occlusion</title>
+    <link rel="stylesheet" href="style.css?v=1.6">
+    <link rel="stylesheet" href="animate.css-main/animate.min.css" />
+</head>
+
+<body>
+    <div id="main_container">
+        <div id="app">
+            <h1>Image Occlusion</h1>
+            <p id="description">Image Occlusion is a learning tool where students can interactively guess and learn by
+                drawing over images. Upload an image, draw "FlashCards" and enhance your learning experience.</p>
+            <label for="image_upload" class="upload-button" title="upload new image">Upload Image</label>
+            <input type="file" id="image_upload" accept="image/*">
+            <button title="redraw saved image" id="redraw_previous_image">Redraw Saved Image</button>
+            <p id="image_hidden_P_tag_for_saving_src"></p>
+            <div id="saved_drawing_screen_shot" title="redraw saved image"></div>
+        </div>
+        <div id="occlusion_canvas_container">
+            <div id="navbar_buttons">
+                <button title="create" id="create">
+                    <div></div>
+                </button>
+                <button title="preview" id="preview">
+                    <div></div>
+                </button>
+            </div>
+            <button title="save" id="save">Save</button>
+            <span id="close_button" title="quit">Exit</span>
+            <canvas id="occlusion_canvas" class="animate_animated animate_zoomIn"></canvas>
+            <div id="modal">
+                <div class="switch-container">
+                    <h2 id="card_label"></h2>
+                    <span class="enabled-text">Ignore</span>
+                    <label class="switch">
+                        <input type="checkbox" id="enableCheckbox">
+                        <span class="slider"></span>
+                    </label>
+                    <button title="close" id="close_modal_btn"> x </button>
+                </div>
+
+                <label for="frontLabel">Question</label>
+                <input type="text" autocomplete="off" id="frontLabel">
+                <br>
+                <label for="backLabel">Answer</label>
+                <input type="text" autocomplete="off" id="backLabel">
+                <br>
+                <button title="add lables to card" id="addValueButton" class="modal-button-value">Add</button>
+                <button id="deletelabelButton" class="modal-button-value" title="delete card"> Delete <div></div>
+                </button>
+            </div>
+            <h2 id="guess_me" class="animate_animated animate_rotateIn">Guess the Cards!</h2>
+            <button id="start_test">TEST ME</button>
+            <button id="end_test">END TEST</button>
+            <div id="test_modal" class="animate_animated animate_backInRight">
+                <div>
+                    <label for="testBackLabel">&nbsp;Your Answer&nbsp;</label>
+                    <div id="label_result_container">
+                        <label id="question_label_result_container">&nbsp; Did you get it right? &nbsp; </label>
+                        <label for="correct_answer">&nbsp;Yes&nbsp;</label>
+                        <input type="radio" name="answer" value="correct" id="correct_answer">
+                        <label for="incorrect_answer">&nbsp;No&nbsp;</label>
+                        <input type="radio" name="answer" value="incorrect" id="incorrect_answer">
+                    </div>
+                    <button title="close" id="close_test_modal_btn"> x </button>
+                </div>
+                <input type="text" id="correctTestBackLabel" class="animate_animated animate__flash" readonly>
+                <input placeholder="Answer of the Card" type="text" autocomplete="off" id="testBackLabel">
+                <button id="show_answer">SHOW ANSWER</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="imageOcclusion.js?v=1.6"></script>
+</body>
+
+</html>
