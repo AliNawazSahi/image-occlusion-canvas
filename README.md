@@ -1,4 +1,4 @@
-                                                          Front Page 
+Front Page !!
 
 ![Image Occlusion - Google Chrome 26_06_2024 9_10_21 pm](https://github.com/AliNawazSahi/image-occlusion/assets/125664781/09f4fefe-3aca-4bc7-9c30-41cdedaea6e1)
 Proceed for making test by making flash cards by dragging 
